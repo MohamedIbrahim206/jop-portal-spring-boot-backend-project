@@ -9,8 +9,8 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.example.demo.DTO.CompanyDTO;
+import com.example.demo.company.service.ICompanyService;
 import com.example.demo.entity.Company;
-import com.example.demo.service.ICompanyService;
 
 @RestController
 @RequestMapping("/companies")

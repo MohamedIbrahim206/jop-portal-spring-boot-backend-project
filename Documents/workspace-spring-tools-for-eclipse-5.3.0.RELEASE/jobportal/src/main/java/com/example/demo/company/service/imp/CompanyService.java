@@ -1,4 +1,4 @@
-package com.example.demo.service;
+package com.example.demo.company.service.imp;
 
 import java.util.List;
 import java.util.stream.Collectors;
@@ -6,6 +6,7 @@ import java.util.stream.Collectors;
 import org.springframework.stereotype.Service;
 
 import com.example.demo.DTO.CompanyDTO;
+import com.example.demo.company.service.ICompanyService;
 import com.example.demo.entity.Company;
 import com.example.demo.repository.CompanyRepository;
 
