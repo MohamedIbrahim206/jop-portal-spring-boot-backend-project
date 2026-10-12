@@ -19,17 +19,11 @@ import lombok.Setter;
 @Table(name = "contacts")
 @Setter
 @Getter
-public class Contact {
+public class Contact extends BaseEntity {
 	@Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "id", nullable = false)
     private Long id;
-
-    @Column(name = "created_at", nullable = false)
-    private Instant createdAt;
-
-    @Column(name = "created_by", nullable = false, length = 20)
-    private String createdBy;
 
     @Column(name = "email", nullable = false)
     private String email;
@@ -47,12 +41,6 @@ public class Contact {
 
     @Column(name = "subject", nullable = false)
     private String subject;
-
-    @Column(name = "updated_at")
-    private Instant updatedAt;
-
-    @Column(name = "updated_by", length = 20)
-    private String updatedBy;
 
     @Column(name = "user_type", nullable = false, length = 50)
     private String userType;

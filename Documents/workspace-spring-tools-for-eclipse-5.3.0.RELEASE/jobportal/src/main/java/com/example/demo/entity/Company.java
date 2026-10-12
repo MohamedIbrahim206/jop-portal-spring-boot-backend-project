@@ -19,7 +19,7 @@ import lombok.Setter;
 @Table(name = "COMPANIES")
 @Setter
 @Getter
-public class Company {
+public class Company extends BaseEntity {
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -57,17 +57,5 @@ public class Company {
 	@Column(name = "WEBSITE", length = 500)
 	private String website;
 
-	@CreationTimestamp
-	@Column(name = "CREATED_AT", nullable = false, updatable = false)
-	private Instant createdAt;
-
-	@Column(name = "CREATED_BY", nullable = false, length = 20)
-	private String createdBy;
-
-	@Column(name = "UPDATED_AT")
-	private Instant updatedAt;
-
-	@Column(name = "UPDATED_BY", length = 20)
-	private String updatedBy;
-
+	
 }
